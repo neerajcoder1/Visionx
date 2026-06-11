@@ -20,7 +20,7 @@ const TEAM_DATA = [
     ],
     achievements: [
       "10+ Hackathons Participated",
-      "Founder of Vision X",
+      "Co-Founder of VisionX",
       "4+ Years Learning Data Analytics",
       "Multiple Internship Programs",
     ],
@@ -35,11 +35,50 @@ const TEAM_DATA = [
     quote: "Turning ideas into impactful technology solutions.",
   },
   {
+    id: 4,
+    initials: "PD",
+    name: "Prince Dubey",
+    role: "Co-Founder",
+    university:
+      "Garden City University · B.Sc Data Science & Cybersecurity (2027)",
+    badge: "Co-Founder",
+    badgeClass: "badge-lead",
+    badge2: "IIT Kanpur Certification",
+    badge2Class: "badge-iit",
+    avatarClass: "green",
+    avatarUrl: "certs/images/prince-profile.jpeg",
+    skills: [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Power BI",
+      "Pandas/NumPy",
+      "Scikit-learn",
+      "Predictive Modeling",
+      "Data Engineering",
+      "Business Intelligence",
+    ],
+    achievements: [
+      "IIT Kanpur Certification",
+      "Co-Founder of VisionX",
+      "AI for Skilling Internship at Capgemini",
+    ],
+    projects: [
+      "Last Mile Delivery Analytics",
+      "Customer Churn Prediction (85% Accuracy)",
+      "Sales Forecasting Analysis",
+    ],
+    linkedin: "https://www.linkedin.com/in/prince-dubey-365056323",
+    github: "https://github.com/Prince-Dubeyy",
+    portfolio: "https://prince-portfolio-lime-mu.vercel.app/",
+    quote: "Data tells the story. Intelligence drives the future.",
+  },
+  {
     id: 2,
     initials: "DR",
     name: "Dipin Roka",
     role: "Web Developer & AI Enthusiast",
-    university: "Alliance University · Bengaluru",
+    university: "Alliance University \u00B7 Bengaluru",
     badge: "Core Member",
     badgeClass: "badge-core",
     avatarClass: "blue",
@@ -56,7 +95,7 @@ const TEAM_DATA = [
       "Data Analysis",
     ],
     achievements: [
-      "AICTE × 1M1B Green Skills Internship",
+      "AICTE \u00D7 1M1B Green Skills Internship",
       "GreenHack Sustainability Hackathon",
       "EcoWise AI & AirSense creator",
     ],
@@ -75,10 +114,11 @@ const TEAM_DATA = [
     initials: "AT",
     name: "Aryan Singh Thapa",
     role: "Backend Dev & Cybersecurity",
-    university: "Garden City University · BCA (2024–2027)",
+    university: "Garden City University \u00B7 BCA (2024\u20132027)",
     badge: "Core Member",
     badgeClass: "badge-core",
     avatarClass: "pink",
+    avatarUrl: "certs/images/aryan-profile.jpeg",
     skills: [
       "Python",
       "Java",
@@ -91,7 +131,7 @@ const TEAM_DATA = [
       "Machine Learning",
     ],
     achievements: [
-      "Top 20 Finalist – National Quant Finance Olympiad (IIT Guwahati)",
+      "Top 20 Finalist \u2013 National Quant Finance Olympiad (IIT Guwahati)",
       "India AI Impact Buildathon Participant",
       "ET Gen AI Hackathon Participant",
       "Developed AI Voice Detection API",
@@ -104,43 +144,6 @@ const TEAM_DATA = [
     linkedin: "https://www.linkedin.com/in/aryan-singh-thapa-57aba5324",
     github: "https://github.com/aryanst123",
     quote: "Building secure, scalable, and intelligent systems for the future.",
-  },
-  {
-    id: 4,
-    initials: "PD",
-    name: "Prince Dubey",
-    role: "Co-Founder",
-    university:
-      "Garden City University · B.Sc Data Science & Cybersecurity (2027)",
-    badge: "Co-Founder",
-    badgeClass: "badge-lead",
-    avatarClass: "green",
-    avatarUrl: "certs/images/prince-profile.jpeg",
-    skills: [
-      "Python",
-      "SQL",
-      "Machine Learning",
-      "Power BI",
-      "Pandas/NumPy",
-      "Scikit-learn",
-      "Predictive Modeling",
-      "Data Engineering",
-      "Business Intelligence",
-    ],
-    achievements: [
-      "ET AI Hackathon 2026 – Semi Finalist",
-      "ArtPark CodeForge Hackathon Participant",
-      "Co-Founder of VisionX Nexus",
-      "Built Business Intelligence Dashboards",
-    ],
-    projects: [
-      "Last Mile Delivery Analytics",
-      "Customer Churn Prediction (85% Accuracy)",
-      "Sales Forecasting Analysis",
-    ],
-    linkedin: "https://www.linkedin.com/in/prince-dubey-365056323",
-    github: "https://github.com/Prince-Dubeyy",
-    quote: "Data tells the story. Intelligence drives the future.",
   },
   {
     id: 5,
@@ -219,25 +222,6 @@ const PROJECT_DATA = [
     filter: "web",
   },
   {
-    cat: "Social Impact · Web",
-    name: "Stop Human Trafficking",
-    desc: "A web platform to report and raise awareness about human trafficking — with resources, reporting tools, and emergency contacts.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    links: [
-      {
-        text: "GitHub",
-        url: "https://github.com/neerajcoder1/Stop-Human-Trafficking",
-        demo: false,
-      },
-      {
-        text: "Live Demo →",
-        url: "https://stop-human-trafficking.vercel.app/report.html",
-        demo: true,
-      },
-    ],
-    filter: "web",
-  },
-  {
     cat: "AI · DevOps",
     name: "RootPilot AI",
     desc: "AI-powered incident root cause analyzer for SRE and DevOps teams — monitors logs, detects failures, and recommends fixes.",
@@ -265,6 +249,34 @@ const PROJECT_DATA = [
       {
         text: "Live Demo →",
         url: "https://food-court-app-chi.vercel.app/",
+        demo: true,
+      },
+    ],
+    filter: "web",
+  },
+  {
+    cat: "AI · Sustainability",
+    name: "EcoTwin AI",
+    desc: "Digital twin platform that simulates environmental and financial outcomes for logistics networks — predict carbon reduction, cost savings, and ESG scores before making capital decisions.",
+    tags: ["React", "AI", "Data Viz", "Sustainability"],
+    links: [
+      {
+        text: "Live Demo →",
+        url: "https://ecotwin-ai-sustainability-platform.vercel.app/",
+        demo: true,
+      },
+    ],
+    filter: "ai",
+  },
+  {
+    cat: "Sustainability · Web",
+    name: "CarbonTrace",
+    desc: "Track your carbon footprint across travel, energy, and food. Get personalized insights and AI-driven recommendations to reduce emissions and live sustainably.",
+    tags: ["React", "AI", "Data Viz", "Carbon Tracking"],
+    links: [
+      {
+        text: "Live Demo →",
+        url: "https://carbontracev2.netlify.app/",
         demo: true,
       },
     ],
@@ -432,6 +444,7 @@ function renderTeamCards() {
       <div class="tc-head">
         ${m.avatarUrl ? `<img class="tc-avatar-img" src="${m.avatarUrl}" alt="${m.name}" />` : `<div class="tc-avatar ${m.avatarClass}">${m.initials}</div>`}
         <div class="tc-badge ${m.badgeClass}">${m.badge}</div>
+        ${m.badge2 ? `<div class="tc-badge ${m.badge2Class}">${m.badge2}</div>` : ""}
         <div class="tc-name">${m.name}</div>
         <div class="tc-role">${m.role}</div>
         <div class="tc-uni">${m.university}</div>
@@ -459,6 +472,7 @@ function renderTeamCards() {
         <div class="tc-links">
           <a href="${m.linkedin}" target="_blank" class="tc-link">LinkedIn →</a>
           <a href="${m.github}" target="_blank" class="tc-link">GitHub →</a>
+          ${m.portfolio ? `<a href="${m.portfolio}" target="_blank" class="tc-link">Portfolio →</a>` : ""}
         </div>
       </div>
     </div>
