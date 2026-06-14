@@ -41,7 +41,10 @@
 
     <nav>
       <div class="nav-logo">
-        <img class="nav-logo-img" src="logo.jpg" alt="Vision X" />
+        <picture>
+          <source srcset="logo.webp" type="image/webp" />
+          <img class="nav-logo-img" src="logo.jpg" alt="Vision X" />
+        </picture>
         Vision X
       </div>
       <div class="nav-links">
@@ -66,7 +69,6 @@
         <span></span><span></span><span></span>
       </div>
     </nav>
-
 
     <!-- HERO -->
     <section id="hero">
@@ -177,7 +179,7 @@
     </div>
 
     <!-- ABOUT -->
-    <div class="about-wrap full-bg">
+    <div class="about-wrap">
       <div class="inner">
         <section id="about" style="padding: 0; max-width: 100%">
           <div class="section-tag">About Vision X</div>
@@ -265,7 +267,7 @@
     </div>
 
     <!-- TEAM -->
-    <div class="team-wrap full-bg">
+    <div class="team-wrap">
       <div class="inner">
         <section id="team" style="padding: 0; max-width: 100%">
           <div class="section-tag">Core Team</div>
@@ -280,7 +282,7 @@
     </div>
 
     <!-- PROJECTS -->
-    <div class="projects-wrap full-bg">
+    <div class="projects-wrap">
       <div class="inner">
         <section id="projects" style="padding: 0; max-width: 100%">
           <div class="section-tag">Featured Works</div>
@@ -298,7 +300,6 @@
             <button class="fbtn" onclick="filterP('ai', this)">AI</button>
             <button class="fbtn" onclick="filterP('web', this)">Web</button>
             <button class="fbtn" onclick="filterP('data', this)">Data</button>
-  
           </div>
           <div class="proj-grid" id="pg"></div>
         </section>
@@ -306,7 +307,7 @@
     </div>
 
     <!-- ACHIEVEMENTS -->
-    <div class="hack-wrap full-bg">
+    <div class="hack-wrap">
       <div class="inner">
         <section id="achievements" style="padding: 0; max-width: 100%">
           <div class="section-tag">Achievements</div>
@@ -377,7 +378,7 @@
     </div>
 
     <!-- TECH -->
-    <div class="tech-wrap full-bg">
+    <div class="tech-wrap">
       <div class="inner">
         <section id="tech" style="padding: 0; max-width: 100%">
           <div class="section-tag">Tech Stack</div>
@@ -465,7 +466,7 @@
     </div>
 
     <!-- CONTACT -->
-    <div class="contact-wrap full-bg" id="contact">
+    <div class="contact-wrap" id="contact">
       <div class="contact-inner">
         <div class="section-tag" style="color: rgba(255, 255, 255, 0.6)">
           Contact
@@ -522,7 +523,6 @@
         </div>
       </div>
     </div>
-
 
     <!-- MODAL -->
     <div
@@ -593,13 +593,12 @@
           >in</a
         >
       </div>
-    <!-- GALLERY -->
- 
-    <div style="text-align: center; margin-top: 40px;">
-    <a href="gallery.html" class="btn-primary">View Full Gallery</a>
-</div>
-    </footer>
+      <!-- GALLERY -->
 
+      <div style="text-align: center; margin-top: 40px">
+        <a href="gallery.html" class="btn-primary">View Full Gallery</a>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -312,6 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ===== LOADER ===== */
 function initLoader() {
+  if (!DOM.loader) return;
   window.addEventListener("load", () => {
     setTimeout(() => {
       DOM.loader.classList.add("hide");
@@ -319,7 +320,7 @@ function initLoader() {
   });
   // Fallback: hide after 3s even if load event is slow
   setTimeout(() => {
-    if (!DOM.loader.classList.contains("hide")) {
+    if (DOM.loader && !DOM.loader.classList.contains("hide")) {
       DOM.loader.classList.add("hide");
     }
   }, 3000);
@@ -327,6 +328,7 @@ function initLoader() {
 
 /* ===== MOBILE NAV ===== */
 function initMobileNav() {
+  if (!DOM.mobileNav) return;
   window.toggleMobile = function () {
     DOM.mobileNav.classList.toggle("open");
   };
