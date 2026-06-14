@@ -41,430 +41,164 @@
   </head>
   <body>
     <div id="loader"><div class="loader-ring"></div></div>
-
     <div class="bg-text">
-      <div class="bg-text-inner" style="opacity: 0.04">VISION X</div>
+      <div class="bg-text-inner">VISION X</div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-nav-close" onclick="toggleMobile()">✕</button>
+      <a href="index.html#about" onclick="toggleMobile()">About</a>
+      <a href="index.html#team" onclick="toggleMobile()">Team</a>
+      <a href="gallery.html" onclick="toggleMobile()">Gallery</a>
+      <a href="index.html#projects" onclick="toggleMobile()">Works</a>
+      <a href="achievements.html" onclick="toggleMobile()">Achievements</a>
+      <a href="index.html#contact" onclick="toggleMobile()">Contact</a>
     </div>
 
     <nav>
-      <a href="index.html" class="nav-logo">
+      <div class="nav-logo">
         <img class="nav-logo-img" src="logo.jpg" alt="Vision X" />
         Vision X
-      </a>
+      </div>
       <div class="nav-links">
-        <a href="index.html">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#team">Team</a>
         <a href="index.html#projects">Works</a>
+        <a href="achievements.html">Achievements</a>
         <a href="index.html#contact">Contact</a>
+        <a href="gallery.html">Gallery</a>
       </div>
-      <div
-        class="hamburger"
-        onclick="document.getElementById('mobileNav').classList.toggle('open')"
-      >
+      <div class="ach-nav-right">
+        <a href="https://www.linkedin.com/company/visionx-nexus/">LinkedIn</a>
+        <a href="mailto:visionxofficial@zohomail.in">Email</a>
+      </div>
+      <div class="hamburger" onclick="toggleMobile()">
         <span></span><span></span><span></span>
       </div>
     </nav>
 
-    <div class="mobile-nav" id="mobileNav">
-      <button
-        class="mobile-nav-close"
-        onclick="document.getElementById('mobileNav').classList.remove('open')"
-      >
-        ✕
-      </button>
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#team">Team</a>
-      <a href="index.html#projects">Works</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-
-    <!-- Hero -->
+    <!-- HERO -->
     <div class="ach-page-hero">
-      <div class="ach-hero-bg-grid"></div>
-      <div class="ach-hero-inner">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        <div class="ach-hero-label">RECOGNITION & IMPACT</div>
-        <h1 class="ach-hero-title">
-          Achievements<br />
-          <span class="ach-hero-title-accent">&amp; Milestones.</span>
-        </h1>
-        <p class="ach-hero-desc">
-          Every line of code, every late night, every win —
-          <br class="hide-mobile" />
-          documented across hackathons, internships, and certifications.
-        </p>
-        <div class="ach-hero-stats" id="heroStats"></div>
-      </div>
+      <div class="section-tag">Achievements</div>
+      <h1 class="ach-hero-title">
+        Milestones & <span class="purple">Recognition.</span>
+      </h1>
+      <p class="ach-hero-desc">
+        Our journey is marked by a relentless pursuit of excellence. We've
+        participated in over 25 hackathons, secured multiple internships, and
+        continuously upskill with new certifications.
+      </p>
     </div>
 
-    <!-- Photo Collage -->
+    <!-- PHOTO COLLAGE -->
     <div class="ach-photo-collage">
       <div class="ach-collage-track">
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/jp-morgan.png"
-            alt="Aryan Singh Thapa"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Aryan Singh Thapa</div>
-            <div class="ach-collage-role">Backend & Cybersecurity</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/dipin.jpg"
-            alt="Dipin Roka"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Dipin Roka</div>
-            <div class="ach-collage-role">Web Dev & AI</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/neeraj.jpg"
-            alt="Neeraj Gahlout"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Neeraj Gahlout</div>
-            <div class="ach-collage-role">Co-Founder</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/prince.png"
-            alt="Prince Dubey"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Prince Dubey</div>
-            <div class="ach-collage-role">Co-Founder</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/google-cybersecurity.png"
-            alt="Sai Srujan Murthy"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Sai Srujan Murthy</div>
-            <div class="ach-collage-role">Core Team Member</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <!-- Duplicate for seamless scroll -->
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/jp-morgan.png"
-            alt="Aryan Singh Thapa"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Aryan Singh Thapa</div>
-            <div class="ach-collage-role">Backend & Cybersecurity</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/dipin.jpg"
-            alt="Dipin Roka"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Dipin Roka</div>
-            <div class="ach-collage-role">Web Dev & AI</div>
-          </div>
+        <!-- DUPLICATE FOR SEAMLESS SCROLL -->
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/neeraj.jpg"
-            alt="Neeraj Gahlout"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Neeraj Gahlout</div>
-            <div class="ach-collage-role">Co-Founder</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/prince.png"
-            alt="Prince Dubey"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Prince Dubey</div>
-            <div class="ach-collage-role">Co-Founder</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
-        <div class="ach-collage-card">
-          <img
-            class="ach-collage-img"
-            src="certs/images/google-cybersecurity.png"
-            alt="Sai Srujan Murthy"
-          />
-          <div class="ach-collage-info">
-            <div class="ach-collage-name">Sai Srujan Murthy</div>
-            <div class="ach-collage-role">Core Team Member</div>
-          </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
+        </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
+        </div>
+        <div class="ach-card-wrap">
+          <img src="https://via.placeholder.com/400x300" alt="Certificate" />
         </div>
       </div>
     </div>
 
-    <!-- Featured: Rotating -->
-    <div class="ach-featured" id="featuredSection">
-      <div class="ach-featured-bg"></div>
-      <div class="ach-featured-inner" id="featuredInner">
-        <div class="ach-featured-label">Featured Achievement</div>
-        <div
-          id="featuredCarousel"
-          style="position: relative; min-height: 220px"
-        ></div>
-        <div class="featured-dots" id="featuredDots"></div>
-      </div>
+    <!-- ACHIEVEMENTS GRID -->
+    <div class="inner" style="padding-top: 60px">
+      <section id="achievements-grid">
+        <div class="section-tag">Our Wins</div>
+        <h2>A <span class="purple">timeline</span> of success.</h2>
+        <p class="section-sub">
+          From hackathon victories to prestigious certifications, explore the
+          milestones that define our journey.
+        </p>
+        <div class="filter-bar">
+          <button class="fbtn active" onclick="filterA('all', this)">
+            All
+          </button>
+          <button class="fbtn" onclick="filterA('hackathon', this)">
+            Hackathons
+          </button>
+          <button class="fbtn" onclick="filterA('internship', this)">
+            Internships
+          </button>
+          <button class="fbtn" onclick="filterA('certification', this)">
+            Certifications
+          </button>
+          <button class="fbtn" onclick="filterA('competition', this)">
+            Competitions
+          </button>
+        </div>
+        <div class="a-grid" id="ag"></div>
+      </section>
     </div>
 
-    <!-- Content -->
-    <div class="ach-page-content">
-      <div
-        class="ach-filter"
-        style="
-          display: flex;
-          gap: 8px;
-          margin-bottom: 24px;
-          flex-wrap: wrap;
-          align-items: center;
-        "
-      >
-        <span
-          style="
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--muted);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-right: 4px;
-          "
-          >Filter:</span
-        >
-        <button
-          class="fbtn active"
-          onclick="filterAchievements('all', this)"
-          data-filter="all"
-        >
-          All
-        </button>
-        <button
-          class="fbtn"
-          onclick="filterAchievements('individual', this)"
-          data-filter="individual"
-        >
-          Individual
-        </button>
-        <button
-          class="fbtn"
-          onclick="filterAchievements('team', this)"
-          data-filter="team"
-        >
-          Team
-        </button>
-        <span
-          style="
-            width: 1px;
-            height: 24px;
-            background: var(--border);
-            margin: 0 8px;
-          "
-        ></span>
-        <button
-          class="fbtn"
-          onclick="filterAchievements('Hackathon', this)"
-          data-filter="Hackathon"
-        >
-          Hackathon
-        </button>
-        <button
-          class="fbtn"
-          onclick="filterAchievements('Internship', this)"
-          data-filter="Internship"
-        >
-          Internship
-        </button>
-        <button
-          class="fbtn"
-          onclick="filterAchievements('Competition', this)"
-          data-filter="Competition"
-        >
-          Competition
-        </button>
-        <span style="flex: 1; min-width: 12px"></span>
-        <div style="display: flex; gap: 4px; align-items: center">
-          <button
-            class="view-toggle-btn active"
-            data-view="grid"
-            onclick="toggleAchView('grid')"
-            title="Grid view"
+    <!-- FOOTER -->
+    <div class="contact-wrap full-bg" id="contact">
+      <div class="contact-inner">
+        <div class="section-tag" style="color: rgba(255, 255, 255, 0.6)">
+          Contact
+        </div>
+        <h2>Let's <span class="purple">build together.</span></h2>
+        <p class="section-sub">
+          Have an idea, a project, or just want to connect? Reach out.
+        </p>
+        <div class="contact-socials">
+          <a href="mailto:visionxofficial@zohomail.in" class="csoc"
+            >✉️ visionxofficial@zohomail.in</a
           >
-            ⊞
-          </button>
-          <button
-            class="view-toggle-btn"
-            data-view="timeline"
-            onclick="toggleAchView('timeline')"
-            title="Timeline view"
+          <a
+            href="https://www.linkedin.com/company/visionx-nexus/"
+            class="csoc"
+            target="_blank"
+            >💼 LinkedIn</a
           >
-            ☰
-          </button>
         </div>
-        <div
-          style="display: flex; gap: 4px; align-items: center; margin-left: 4px"
-        >
-          <button
-            class="sort-btn active"
-            data-sort="newest"
-            onclick="sortAchievements('newest')"
-            title="Newest first"
-          >
-            ↓ Newest
-          </button>
-          <button
-            class="sort-btn"
-            data-sort="oldest"
-            onclick="sortAchievements('oldest')"
-            title="Oldest first"
-          >
-            ↑ Oldest
-          </button>
-        </div>
-        <button
-          class="add-ach-btn"
-          onclick="openAchModal()"
-          style="margin-left: 8px"
-        >
-          + Add Achievement
-        </button>
-      </div>
-      <div class="ach-gallery-grid" id="achGallery"></div>
-    </div>
-
-    <!-- Lightbox -->
-    <div
-      class="lightbox-overlay"
-      id="lightbox"
-      onclick="if (event.target === this) closeLightbox();"
-    >
-      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
-      <div class="lightbox-caption" id="lightboxCap"></div>
-    </div>
-
-    <!-- Add Achievement Modal -->
-    <div
-      class="modal-overlay"
-      id="achModal"
-      onclick="if (event.target === this) closeAchModal();"
-    >
-      <div class="modal">
-        <button class="modal-close" onclick="closeAchModal()">✕</button>
-        <div class="modal-title">Add Achievement</div>
-        <form class="modal-form" id="achForm" onsubmit="addAchievement(event)">
-          <input
-            type="text"
-            placeholder="Title (e.g. Hackathon Name)"
-            id="achTitle"
-            required
-          />
-          <div class="form-row">
-            <input
-              type="text"
-              placeholder="Subtitle (e.g. Winner)"
-              id="achSubtitle"
-            />
-            <input
-              type="text"
-              placeholder="Member Name"
-              id="achMember"
-              required
-            />
-          </div>
-          <div class="form-row">
-            <select
-              id="achType"
-              style="
-                width: 100%;
-                padding: 12px 16px;
-                background: var(--card-bg);
-                border: 1.5px solid var(--border);
-                border-radius: 8px;
-                color: var(--text);
-                font-family: &quot;Inter&quot;, sans-serif;
-                font-size: 14px;
-                outline: none;
-              "
-            >
-              <option value="individual">Individual</option>
-              <option value="team">Team</option>
-            </select>
-            <select
-              id="achCategory"
-              style="
-                width: 100%;
-                padding: 12px 16px;
-                background: var(--card-bg);
-                border: 1.5px solid var(--border);
-                border-radius: 8px;
-                color: var(--text);
-                font-family: &quot;Inter&quot;, sans-serif;
-                font-size: 14px;
-                outline: none;
-              "
-            >
-              <option value="Hackathon">Hackathon</option>
-              <option value="Internship">Internship</option>
-              <option value="Competition">Competition</option>
-              <option value="Certification">Certification</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <input
-              type="text"
-              placeholder="Date (e.g. 2025-06)"
-              id="achDate"
-              style="width: 100%"
-            />
-          </div>
-          <textarea
-            placeholder="Description..."
-            id="achDesc"
-            rows="3"
-            required
-          ></textarea>
-          <button type="submit" class="submit-btn" style="color: var(--purple)">
-            Add Achievement →
-          </button>
-        </form>
       </div>
     </div>
-
-    <footer>
-      <div>
-        <div class="footer-logo">Vision <span class="purple">X</span></div>
-        <div class="footer-motto">BUILDING THE FUTURE</div>
-      </div>
-      <div class="footer-links">
-        <a href="index.html#about">About</a>
-        <a href="index.html#team">Team</a>
-        <a href="index.html#projects">Works</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="footer-copy">© 2026 Team Vision X.</div>
-    </footer>
 
     <script src="script.js"></script>
+    <script>
+      // Your script for achievements data and filtering
+      const achievements = [
+        // Add your achievement data here
+      ];
+
+      function filterA(category, btn) {
+        // Your filtering logic here
+      }
+
+      // Initial population
+      // filterA('all');
+    </script>
   </body>
 </html>

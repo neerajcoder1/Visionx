@@ -29,11 +29,11 @@
     <div class="bg-text">
       <div class="bg-text-inner">VISION X</div>
     </div>
-
     <div class="mobile-nav" id="mobileNav">
       <button class="mobile-nav-close" onclick="toggleMobile()">✕</button>
       <a href="#about" onclick="toggleMobile()">About</a>
       <a href="#team" onclick="toggleMobile()">Team</a>
+      <a href="gallery.html" onclick="toggleMobile()">Gallery</a>
       <a href="#projects" onclick="toggleMobile()">Works</a>
       <a href="achievements.html" onclick="toggleMobile()">Achievements</a>
       <a href="#contact" onclick="toggleMobile()">Contact</a>
@@ -50,6 +50,7 @@
         <a href="#projects">Works</a>
         <a href="achievements.html">Achievements</a>
         <a href="#contact">Contact</a>
+        <a href="gallery.html">Gallery</a>
       </div>
       <div class="nav-socials">
         <a
@@ -57,6 +58,7 @@
           class="nav-social active"
           title="LinkedIn"
           target="_blank"
+          rel="noopener noreferrer"
           >in</a
         >
       </div>
@@ -64,6 +66,7 @@
         <span></span><span></span><span></span>
       </div>
     </nav>
+
 
     <!-- HERO -->
     <section id="hero">
@@ -295,9 +298,7 @@
             <button class="fbtn" onclick="filterP('ai', this)">AI</button>
             <button class="fbtn" onclick="filterP('web', this)">Web</button>
             <button class="fbtn" onclick="filterP('data', this)">Data</button>
-            <button class="fbtn add-btn" onclick="openProjectModal()">
-              + Add Project
-            </button>
+  
           </div>
           <div class="proj-grid" id="pg"></div>
         </section>
@@ -509,7 +510,9 @@
           <button type="submit" class="submit-btn">Send Message →</button>
         </form>
         <div class="contact-socials">
-          <a href="mailto:visionxofficial@zohomail.in" class="csoc">✉️ visionxofficial@zohomail.in</a>
+          <a href="mailto:visionxofficial@zohomail.in" class="csoc"
+            >✉️ visionxofficial@zohomail.in</a
+          >
           <a
             href="https://www.linkedin.com/company/visionx-nexus/"
             class="csoc"
@@ -519,6 +522,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- MODAL -->
     <div
@@ -562,9 +566,6 @@
             <input type="url" placeholder="GitHub URL (optional)" id="pGit" />
             <input type="url" placeholder="Demo URL (optional)" id="pDemo" />
           </div>
-          <button type="submit" class="submit-btn" style="color: var(--purple)">
-            Add Project →
-          </button>
         </form>
       </div>
     </div>
@@ -580,8 +581,23 @@
         <a href="#projects">Works</a>
         <a href="achievements.html">Achievements</a>
         <a href="#contact">Contact</a>
+        <a href="gallery.html">Gallery</a>
       </div>
-      <div class="footer-copy">© 2026 Team Vision X.</div>
+      <div class="footer-socials">
+        <a
+          href="https://www.linkedin.com/company/visionx-nexus/"
+          class="nav-social active"
+          title="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          >in</a
+        >
+      </div>
+    <!-- GALLERY -->
+ 
+    <div style="text-align: center; margin-top: 40px;">
+    <a href="gallery.html" class="btn-primary">View Full Gallery</a>
+</div>
     </footer>
 
     <script src="script.js"></script>

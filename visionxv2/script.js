@@ -693,43 +693,127 @@ function closeProjectModal(e) {
 
 function addProject(e) {
   e.preventDefault();
-  const name = document.getElementById("pName").value.trim();
-  const cat = document.getElementById("pCat").value.trim();
-  const desc = document.getElementById("pDesc").value.trim();
-  const tagsStr = document.getElementById("pTags").value.trim();
-  const filter = document.getElementById("pFilter").value.trim().toLowerCase();
-  const gitUrl = document.getElementById("pGit").value.trim();
-  const demoUrl = document.getElementById("pDemo").value.trim();
-
-  if (!name || !cat || !desc || !filter) return;
-
-  const tags = tagsStr
-    ? tagsStr
-        .split(",")
-        .map((t) => t.trim())
-        .filter(Boolean)
-    : [];
-  const links = [];
-  if (gitUrl) links.push({ text: "GitHub", url: gitUrl, demo: false });
-  if (demoUrl) links.push({ text: "Live Demo →", url: demoUrl, demo: true });
-  if (!links.length) links.push({ text: "New Project", url: "#", demo: false });
-
-  const validFilters = ["ai", "web", "blockchain", "data"];
-  const finalFilter = validFilters.includes(filter) ? filter : "web";
-
-  PROJECT_DATA.push({
-    cat,
-    name,
-    desc,
-    tags,
-    links,
-    filter: finalFilter,
-  });
-
-  renderProjectCards();
-  document.getElementById("projectForm").reset();
-  closeProjectModal();
 }
+
+/* ===== ACHIEVEMENT DATA ===== */
+const ACHIEVEMENT_DATA = [
+  {
+    cat: "hackathon",
+    title: "TraceChain",
+    desc: "A blockchain-powered supply chain solution for enhanced transparency and traceability, developed during a 48-hour hackathon.",
+    date: "July 2024",
+    icon: "💻",
+  },
+  {
+    cat: "internship",
+    title: "AI for Skilling Intern",
+    desc: "Completed a 3-month internship at Capgemini, focusing on AI-driven skill development and data analysis.",
+    date: "June 2024",
+    icon: "🏢",
+  },
+  {
+    cat: "certification",
+    title: "IIT Kanpur Certified",
+    desc: "Received a professional certification from IIT Kanpur in advanced data analytics and machine learning.",
+    date: "May 2024",
+    icon: "📜",
+  },
+  {
+    cat: "competition",
+    title: "National Quant Finance Olympiad",
+    desc: "Secured a Top 20 position in the prestigious National Quant Finance Olympiad organized by IIT Guwahati.",
+    date: "April 2024",
+    icon: "🏆",
+  },
+  {
+    cat: "hackathon",
+    title: "GreenHack Sustainability Hackathon",
+    desc: "Developed EcoWise AI, a platform for sustainable resource management, winning the 'Best Environmental Impact' award.",
+    date: "March 2024",
+    icon: "💻",
+  },
+  {
+    cat: "certification",
+    title: "Certified Cloud Practitioner",
+    desc: "Earned the AWS Certified Cloud Practitioner certification, validating foundational knowledge of cloud concepts.",
+    date: "February 2024",
+    icon: "📜",
+  },
+];
+
+/* ===== RENDER ACHIEVEMENT CARDS ===== */
+function renderAchievementCards() {
+  const grid = document.getElementById("ag");
+  if (!grid) return;
+  grid.innerHTML = ACHIEVEMENT_DATA.map(
+    (a) => `
+    <div class="a-card reveal" data-cat="${a.cat}">
+      <div class="a-card-tag">${a.cat}</div>
+      <div class="a-card-title">${a.title}</div>
+      <div class="a-card-desc">${a.desc}</div>
+      <div class="a-card-date">${a.date}</div>
+    </div>
+  `,
+  ).join("");
+}
+
+/* ===== ACHIEVEMENT FILTER ===== */
+function initAchievementFilter() {
+  window.filterA = function (cat, btn) {
+    document
+      .querySelectorAll(".fbtn")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    document.querySelectorAll(".a-card").forEach((card) => {
+      if (cat === "all" || card.dataset.cat === cat) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  };
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderAchievementCards();
+  initAchievementFilter();
+});
+const name = document.getElementById("pName").value.trim();
+const cat = document.getElementById("pCat").value.trim();
+const desc = document.getElementById("pDesc").value.trim();
+const tagsStr = document.getElementById("pTags").value.trim();
+const filter = document.getElementById("pFilter").value.trim().toLowerCase();
+const gitUrl = document.getElementById("pGit").value.trim();
+const demoUrl = document.getElementById("pDemo").value.trim();
+
+if (!name || !cat || !desc || !filter) return;
+
+const tags = tagsStr
+  ? tagsStr
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean)
+  : [];
+const links = [];
+if (gitUrl) links.push({ text: "GitHub", url: gitUrl, demo: false });
+if (demoUrl) links.push({ text: "Live Demo →", url: demoUrl, demo: true });
+if (!links.length) links.push({ text: "New Project", url: "#", demo: false });
+
+const validFilters = ["ai", "web", "blockchain", "data"];
+const finalFilter = validFilters.includes(filter) ? filter : "web";
+
+PROJECT_DATA.push({
+  cat,
+  name,
+  desc,
+  tags,
+  links,
+  filter: finalFilter,
+});
+
+renderProjectCards();
+document.getElementById("projectForm").reset();
+closeProjectModal();
 
 // Close modal on Escape
 document.addEventListener("keydown", (e) => {
